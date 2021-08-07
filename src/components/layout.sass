@@ -1,0 +1,47 @@
+$mobile: 400px
+
+// 2 Column Layout
+
+.Wrapper-2-Col
+    display: grid
+    grid-template-columns: 1fr 1fr
+    width: 100%
+    text-align: left
+
+.Column-1
+    grid-column: 1
+    justify-content: center
+    align-items: center
+
+.Column-2
+    grid-column: 2
+    @media (max-aspect-ratio: 1/1)
+        display: none
+
+.Right-Justified
+    text-align: right
+
+.Center-Justified
+    text-align: center
+    justify-content: center
+    display: flex
+
+// Small centered space between 2 columns
+
+.Wrapper-3-Col
+    display: grid
+    grid-template-columns: 4fr 1fr 4fr
+    width: 100%
+    text-align: left
+
+.Three-Column-1
+    justify-self: end
+    grid-column: 1
+
+.Three-Column-2
+    justify-self: center
+    grid-column: 2
+
+.Three-Column-3
+    justify-self: start
+    grid-column: 3

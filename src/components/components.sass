@@ -1,0 +1,145 @@
+$mobile: 400px
+
+.FancyLine
+    border-left: 6px solid #61dafb
+    height: 500px
+    width: 0px
+    -moz-box-shadow: 0 0 10px #FFF
+    -webkit-box-shadow: 0 0 10px #FFF
+    box-shadow: 0 0 10px #FFF
+
+.Overlay
+    height: 100%
+    width: 100%
+    position: fixed
+    z-index: 1
+    left: 0
+    top: 0
+    background-color: rgb(0,0,0)
+    background-color: rgba(0,0,0, 0.9)
+    overflow: hidden
+    animation-name: goAway
+    animation-delay: 4s
+    animation-duration: 1s
+    animation-timing-function: cubic-bezier(0.2, 0.01)
+    animation-fill-mode: forwards
+
+@keyframes goAway
+    0%
+        left: 0px
+        opacity: 1
+    100%
+        left: 800px
+        opacity: 0
+
+.StartIcon
+    height: 10%
+    padding: 20% 0 10%
+
+.Heading
+    font-weight: 400
+    letter-spacing: .2em
+    @media (min-width: $mobile)
+        text-align: left
+
+.Subheading
+    font-weight: 400
+    letter-spacing: .2em
+    margin-top: 10vh
+    @media (min-width: $mobile)
+        text-align: left
+        font-size: 1.5em
+
+.First-Subheading
+    @extend .Subheading
+    color: #61dafb
+    margin-top: 3vh
+
+.Page
+    // The following is for Desktop. Mobile has default inherited classes.
+    @media (min-width: $mobile)
+        width: 75%
+        text-align: left
+
+.Column-Left
+    @media (min-width: $mobile)
+        text-align: left
+
+.Column-Right
+    @media (min-width: $mobile)
+        text-align: right
+
+.Icon
+    max-height: calc(30px + 2vmin)
+
+Code 
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+    text-decoration: none
+
+@keyframes changeColor
+    0%
+        background-color: rgba(7, 43, 53, 0)
+        color: #61dafb
+        // transform: translateX(0)
+    100%
+        background-color: #61dafb
+        color: #282d33
+        // transform: translateX(-50%)
+
+CustomButton
+        box-shadow: 0 3px 12px 3px #1e1e1e
+        padding: 13px 0px
+        display: block
+        border-radius: 8px
+        width: 150px
+        border-style: solid
+        border-color: #61dafb
+        text-decoration: none
+        &:hover
+            animation-name: changeColor
+            animation-duration: 1.5s
+            animation-fill-mode: forwards
+
+.Link
+    text-decoration: none
+    color: #61dafb
+    text-align: center
+    font-size: 20px
+
+.ImageButton
+    max-height: 70px
+
+.ProgressText
+    position: fixed
+    right: 4%
+    font-size: 14px
+    white-space: pre-wrap
+    text-align: right
+
+.ActiveText
+    @extend .ProgressText
+    color: #61dafb
+
+.Progress
+    position: fixed
+    top: 10vh
+
+.ProgressBar
+    background-color: #FEFEFE
+    opacity: 20%
+    height: 80vh
+    width: 3px
+    position: fixed
+    right: 3%
+    border-radius: 1px
+
+.ProgressBarFilled
+    background-color: #61dafb
+    height: 0vh
+    width: 3px
+    position: fixed
+    right: 3%
+    border-radius: 1px
+
+Blue
+    color: #61dafb
