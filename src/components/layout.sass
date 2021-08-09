@@ -45,3 +45,10 @@ $mobile: 400px
 .Three-Column-3
     justify-self: start
     grid-column: 3
+
+.Wrapper-Languages
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    text-align: center
+    @media (max-width: 1000px)
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))

@@ -27,40 +27,78 @@ class ResumePage extends Component {
             </p>
           </div>
         </Fade>
-        <div className="Wrapper-3-Col">
-          <div className="Three-Column-1">
-            <Fade left>
-              <p>
-                <code>
-                  Javascript -{" "}
-                  <img src={jsLogo} alt="Javascript" className="Icon" /> - Skill
-                  Level: Wizard 🧙‍♂️
-                </code>
-              </p>
-              <p>
-                <code>
-                  HTML & CSS -{" "}
-                  <img src={htmlLogo} alt="HTML" className="Icon" />
-                  <img src={cssLogo} alt="CSS" className="Icon" />
-                </code>
-              </p>
-            </Fade>
+        <div className="Wrapper-Languages">
+          <div>
+            <img src={jsLogo} alt="Javascript" className="Icon" />
+            <p>
+              <code>Javascript - 🧙‍♂️</code>
+            </p>
           </div>
-          <div className="Three-Column-3">
-            <Fade right>
-              <p>
-                <code>
-                  React - <img src={reactLogo} alt="React" className="Icon" /> -
-                  Skill Level: Wizard 🧙‍♂️
-                </code>
-              </p>
-              <p>
-                <code>
-                  React Native -{" "}
-                  <img src={reactLogo} alt="React" className="Icon" />
-                </code>
-              </p>
-            </Fade>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>React - 🧙‍♂️</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>Node JS</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>React Native</code>
+            </p>
+          </div>
+          <div>
+            <img src={htmlLogo} alt="HTML" className="Icon" />
+            <p>
+              <code>HTML</code>
+            </p>
+          </div>
+          <div>
+            <img src={cssLogo} alt="CSS" className="Icon" />
+            <p>
+              <code>CSS</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>Redux</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>Python</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>PHP</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>Swift</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>SQL</code>
+            </p>
+          </div>
+          <div>
+            <img src={reactLogo} alt="React" className="Icon" />
+            <p>
+              <code>Firebase</code>
+            </p>
           </div>
         </div>
       </div>

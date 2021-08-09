@@ -5,13 +5,9 @@ import PortfolioPage from "./pages/portfolioPage";
 import Homepage from "./pages/homepage";
 import React, { useState } from 'react';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import PMSysPage from "./pages/pmsysPage";
 import AboutPage from "./pages/about";
 import ResumePage from "./pages/resumePage";
 import ContactPage from "./pages/contactPage";
-import PropsysPage from "./pages/propsysPage";
-import DevsitePage from "./pages/devsitePage";
-import TktgPage from "./pages/tktgPage";
 import NavBar from './components/navbar';
 
 function App() {
