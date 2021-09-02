@@ -1,6 +1,15 @@
 import React, { Component } from "react";
+import { Carousel } from "react-responsive-carousel";
 import Fade from "react-reveal/Fade";
 import Progress from "../components/progress";
+import TKTG1 from "../images/TKTG_1.png";
+import TKTG2 from "../images/TKTG_2.png";
+import TDS_1 from "../images/TDS_1.png";
+import TDS_2 from "../images/TDS_2.png";
+import TDS_3 from "../images/TDS_3.png";
+import Scanit_1 from "../images/Scanit_1.jpg";
+import Scanit_2 from "../images/Scanit_2.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class PortfolioPage extends Component {
   constructor(props) {
@@ -156,20 +165,25 @@ class PortfolioPage extends Component {
               </li>
             </div>
             <div className="Column-2" style={{ gridRow: 2 }}>
-              <p style={{ textAlign: "right" }}>
-                <code>SCREENSHOT HERE</code>
-              </p>
+              <Carousel className="Carousel">
+                <div>
+                  <img src={TKTG1} alt="" />
+                </div>
+                <div>
+                  <img src={TKTG2} alt="" />
+                </div>
+              </Carousel>
             </div>
             <div className="Column-1" style={{ gridRow: 3 }}>
               <p>
                 <code>My role: Architect, Owner</code>
               </p>
             </div>
-            <div className="Column-2" style={{ gridRow: 3 }}>
+            {/* <div className="Column-2" style={{ gridRow: 3 }}>
               <p style={{ textAlign: "center" }}>
                 <code>Languages Used Here</code>
               </p>
-            </div>
+            </div> */}
           </Fade>
           <Fade right>
             <div className="Column-2" style={{ gridRow: 4 }}>
@@ -198,21 +212,32 @@ class PortfolioPage extends Component {
                 <code>Data submission to client databases</code>
               </li>
             </div>
-            <div className="Column-1" style={{ gridRow: 5 }}>
-              <p style={{ textAlign: "left" }}>
+            <div
+              className="Column-1"
+              style={{ gridRowStart: 4, gridRowEnd: 6 }}
+            >
+              <Carousel className="Carousel-Mobile-Images" showThumbs={false}>
+                <div>
+                  <img src={Scanit_1} alt="" />
+                </div>
+                <div>
+                  <img src={Scanit_2} alt="" />
+                </div>
+              </Carousel>
+              {/* <p className="Offset">
                 <code>SCREENSHOT HERE</code>
-              </p>
+              </p> */}
             </div>
             <div className="Column-2" style={{ gridRow: 6 }}>
               <p>
                 <code>My role: Architect, Senior Engineer</code>
               </p>
             </div>
-            <div className="Column-1" style={{ gridRow: 6 }}>
+            {/* <div className="Column-1" style={{ gridRow: 6 }}>
               <p style={{ textAlign: "center" }}>
                 <code>Languages Used Here</code>
               </p>
-            </div>
+            </div> */}
           </Fade>
           <Fade left>
             <div
@@ -248,16 +273,29 @@ class PortfolioPage extends Component {
               <li>
                 <code>Simple UX</code>
               </li>
-            </div>
-            <div className="Column-2" style={{ gridRow: 8 }}>
-              <p style={{ textAlign: "right" }}>
-                <code>SCREENSHOT HERE</code>
-              </p>
-            </div>
-            <div className="Column-1" style={{ gridRow: 9 }}>
               <p ref={this.bottomRef}>
                 <code>My role: Product Owner (Scrum)</code>
               </p>
+            </div>
+            <div
+              className="Column-2"
+              style={{ gridRowStart: 7, gridRowEnd: 9 }}
+              id="example"
+            >
+              <Carousel className="Carousel-Mobile-Images" showThumbs={false}>
+                <div>
+                  <img src={TDS_1} alt="" />
+                </div>
+                <div>
+                  <img src={TDS_2} alt="" />
+                </div>
+                <div>
+                  <img src={TDS_3} alt="" />
+                </div>
+              </Carousel>
+              {/* <p className="Offset">
+                <code>SCREENSHOT HERE</code>
+              </p> */}
             </div>
           </Fade>
           {/* <Fade left>

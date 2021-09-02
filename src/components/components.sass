@@ -1,4 +1,4 @@
-$mobile: 400px
+$mobile: 600px
 
 .FancyLine
     border-left: 6px solid #61dafb
@@ -39,8 +39,10 @@ $mobile: 400px
 .Heading
     font-weight: 400
     letter-spacing: .2em
-    @media (min-width: $mobile)
-        text-align: left
+    text-align: left
+    @media (max-width: $mobile)
+        text-align: center
+        margin-bottom: 16%
 
 .Subheading
     font-weight: 400
@@ -52,7 +54,6 @@ $mobile: 400px
 
 .First-Subheading
     @extend .Subheading
-    color: #61dafb
     margin-top: 3vh
 
 .Page
@@ -72,7 +73,16 @@ $mobile: 400px
 .Icon
     max-height: calc(30px + 2vmin)
 
-Code 
+.Image-Grid-Item
+    padding: 10% 15%
+    @media (max-width: $mobile)
+        padding: 6%
+
+.Code
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+    text-decoration: none
+
+Code
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
     text-decoration: none
 
@@ -92,15 +102,31 @@ CustomButton
         background-color: #61dafb
         color: #282d33
         transition: background-color 1.5s ease
+    @media (min-width: $mobile)
+        padding: 13px 20px
+        font-size: .9em
 
 .Link
     text-decoration: none
     color: #61dafb
     text-align: center
+
+.BigLink
+    @extend .Link
     font-size: 20px
 
 .ImageButton
     max-height: 70px
+    transition: filter .7s ease
+    &:hover
+        filter: brightness(0) saturate(100%) invert(85%)
+        transition: filter .7s ease
+
+.White-ImageButton
+    @extend .ImageButton
+    &:hover
+        filter: brightness(10%) saturate(70%) invert(70%)
+        transition: filter .7s ease
 
 .ProgressText
     position: fixed
@@ -144,3 +170,22 @@ CustomButton
 
 Blue
         color: #61dafb
+
+.Vertical-Space
+    margin: 12% 0
+    @media (max-width: $mobile)
+        margin: 32% 0
+
+.Email-Button
+    margin: 6% 0
+    @media (max-width: $mobile)
+        margin: 12% 0
+.Carousel
+    padding: 10% 0 0 10%
+    @media (max-width: $mobile)
+        padding: 15% 0 0 0
+
+.Carousel-Mobile-Images
+    margin: 100px 20% 0
+    @media (max-width: $mobile)
+        padding: 20px 20%

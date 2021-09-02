@@ -1,6 +1,9 @@
 import React from "react";
-import logo from "../Logo_1_React_Blue_2.svg";
+import logo from "../images/Logo_Space.svg";
+import hamburgerMenu from "../images/Hamburger-Menu-White.svg";
 import "../components/navbar.sass";
+import { useState } from "react";
+import NavOverlay from "./navOverlay";
 
 const NavBar = (props) => {
   const { display, top } = props;
@@ -11,6 +14,7 @@ const NavBar = (props) => {
   const currentPage = window.location.pathname;
 
   let navLinks = [];
+  let mobileNavLinks = [];
   const pages = ["/portfolio", "/about", "/contact", "/resume"];
 
   pages.forEach((page) => {
@@ -22,7 +26,19 @@ const NavBar = (props) => {
         {pageName}
       </a>
     );
+    mobileNavLinks.push({
+      page: pageName,
+      link: page,
+      active: linkClass ? true : false,
+    });
   });
+
+  let [menuOpen, setMenuOpen] = useState("Menu-Closed");
+
+  const handleClick = () => {
+    if (menuOpen === "Menu-Closed") setMenuOpen("Menu-Open");
+    else setMenuOpen("Menu-Closed");
+  };
 
   return (
     <div className={navbarClass}>
@@ -34,6 +50,15 @@ const NavBar = (props) => {
       <div className="NavSection2">
         <nav>{navLinks}</nav>
       </div>
+      <div className="Menu-Parent-Div">
+        <img
+          className="Hamburger-Menu"
+          onClick={() => handleClick()}
+          src={hamburgerMenu}
+          alt="Menu"
+        />
+      </div>
+      <NavOverlay menuOpen={menuOpen} navLinks={mobileNavLinks} />
     </div>
   );
 };

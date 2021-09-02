@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Loading from "./loadPage";
 import Fade from "react-reveal/Fade";
+import LinkedInLogo from "../images/linkedinLogo.png";
+import EmailIcon from "../images/emailIcon.svg";
+import Button from "../components/customButton";
 
 // Talk about how I specialize in all things Javascript. Frontend, backend, etc. Node, versatile language. Also familiar with others.
 
@@ -42,21 +45,44 @@ class HomePage extends Component {
             <h1 className="Heading">Trevor Jarvis</h1>
           </Fade>
           <Fade right>
-            <p>
-              <code>
-                Senior Software Engineer and Technical Project Manager
-              </code>
-            </p>
-            <p>
-              <code>I specialize in Javascript and React.</code>
-            </p>
-            <p>
-              <code>
-                I use Agile/Scrum methodologies to effectively manage my
-                projects.
-              </code>
-            </p>
+            <div className="Code">
+              <p>Senior Software Engineer and Technical Project Manager</p>
+              <p>
+                I specialize in Javascript and <blue>React</blue>.
+              </p>
+              <p>
+                I use Agile/Scrum methodologies to manage my projects
+                effectively.
+              </p>
+              <p>
+                Check out my portfolio{" "}
+                <a href="/portfolio" className="Link">
+                  HERE
+                </a>{" "}
+                or click one of the links below to send me a message.
+              </p>
+            </div>
           </Fade>
+          <div className="Wrapper-3-Col" style={{ marginTop: "55px" }}>
+            <Fade left>
+              <div className="Three-Column-1">
+                <Button
+                  type="white-image"
+                  image={EmailIcon}
+                  link="mailto:tmjavascript@gmail.com"
+                />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="Three-Column-3">
+                <Button
+                  type="image"
+                  image={LinkedInLogo}
+                  link="https://www.linkedin.com/in/trevor-jarvis-b7b235185/"
+                />
+              </div>
+            </Fade>
+          </div>
         </div>
       </div>
     );

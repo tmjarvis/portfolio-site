@@ -1,4 +1,4 @@
-$mobile: 400px
+$mobile: 600px
 
 // 2 Column Layout
 
@@ -7,6 +7,9 @@ $mobile: 400px
     grid-template-columns: 1fr 1fr
     width: 100%
     text-align: left
+    @media (max-width: $mobile)
+        display: block
+        text-align: center
 
 .Column-1
     grid-column: 1
@@ -15,8 +18,10 @@ $mobile: 400px
 
 .Column-2
     grid-column: 2
-    @media (max-aspect-ratio: 1/1)
-        display: none
+
+.Offset
+    @media (min-width: calc(#{$mobile} + 1px))
+        text-align: right
 
 .Right-Justified
     text-align: right

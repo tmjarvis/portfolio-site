@@ -2,19 +2,47 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import jsLogo from "../images/jsLogo.png";
 import reactLogo from "../images/reactLogo.svg";
+import reactNativeLogo from "../images/reactNativeLogo.svg";
 import htmlLogo from "../images/htmlLogo.png";
 import cssLogo from "../images/cssLogo.png";
+import nodeLogo from "../images/nodeLogo.png";
+import pythonLogo from "../images/pythonLogo.png";
+import reduxLogo from "../images/reduxLogo.png";
+import sqlLogo from "../images/sqlLogo.png";
+import firebaseLogo from "../images/firebaseLogo.png";
+import swiftLogo from "../images/swiftLogo.png";
+import phpLogo from "../images/phpLogo.svg";
 import Button from "../components/customButton";
 
 class ResumePage extends Component {
-  state = {};
+  state = {
+    techItems: [
+      { name: "Javascript", image: jsLogo },
+      { name: "React", image: reactLogo },
+      { name: "Node", image: nodeLogo },
+      { name: "React Native", image: reactNativeLogo },
+      { name: "HTML", image: htmlLogo },
+      { name: "CSS", image: cssLogo },
+      { name: "Redux", image: reduxLogo },
+      { name: "Python", image: pythonLogo },
+      { name: "PHP", image: phpLogo },
+      { name: "Swift", image: swiftLogo },
+      { name: "SQL", image: sqlLogo },
+      { name: "Firebase", image: firebaseLogo },
+    ],
+  };
   render() {
+    const items = this.state.techItems.map((item, index) => (
+      <div className="Image-Grid-Item">
+        <img src={item.image} alt={item.name} className="Icon" />
+      </div>
+    ));
     return (
       <div className="Page">
         {/* <h1 className='Heading'>Some Headline</h1> */}
         <Fade down>
           <div className="Center-Justified">
-            <p>
+            <p className="Vertical-Space">
               <code>Check out my resume by clicking here 👇</code>
             </p>
           </div>
@@ -22,85 +50,12 @@ class ResumePage extends Component {
             <Button text="Download Resume" link="google.com" className />
           </div>
           <div className="Center-Justified">
-            <p>
+            <p className="Vertical-Space">
               <code>Some of the technologies I'm familiar with:</code>
             </p>
           </div>
         </Fade>
-        <div className="Wrapper-Languages">
-          <div>
-            <img src={jsLogo} alt="Javascript" className="Icon" />
-            <p>
-              <code>Javascript - 🧙‍♂️</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>React - 🧙‍♂️</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>Node JS</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>React Native</code>
-            </p>
-          </div>
-          <div>
-            <img src={htmlLogo} alt="HTML" className="Icon" />
-            <p>
-              <code>HTML</code>
-            </p>
-          </div>
-          <div>
-            <img src={cssLogo} alt="CSS" className="Icon" />
-            <p>
-              <code>CSS</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>Redux</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>Python</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>PHP</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>Swift</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>SQL</code>
-            </p>
-          </div>
-          <div>
-            <img src={reactLogo} alt="React" className="Icon" />
-            <p>
-              <code>Firebase</code>
-            </p>
-          </div>
-        </div>
+        <div className="Wrapper-Languages">{items}</div>
       </div>
     );
   }
