@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../images/Logo_Space.svg";
-import hamburgerMenu from "../images/Hamburger-Menu-White.svg";
+import hamburgerMenu from "../images/Hamburger-Menu.svg";
 import "../components/navbar.sass";
 import { useState } from "react";
 import NavOverlay from "./navOverlay";
