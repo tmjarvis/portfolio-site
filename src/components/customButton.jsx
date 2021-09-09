@@ -14,6 +14,12 @@ const CustomButton = (props) => {
     );
   }
 
+  if (props.type === "download") {
+    return (
+      <a onClick={() => window.open(props.link, "_blank")}>{customButton}</a>
+    );
+  }
+
   return (
     <a href={props.link} className="Link">
       {customButton}

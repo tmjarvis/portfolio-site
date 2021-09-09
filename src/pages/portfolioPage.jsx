@@ -45,12 +45,12 @@ class PortfolioPage extends Component {
       console.log("We're at the top of the page!");
       this.handleNavChange(true, true);
     } else if (this.state.progress + 1 < progress) {
-      console.log(
-        `Scrolled down, turn nav off. State: ${this.state.progress}, Progress: ${progress}`
-      );
+      // console.log(
+      //   `Scrolled down, turn nav off. State: ${this.state.progress}, Progress: ${progress}`
+      // );
       this.handleNavChange(false, false);
     } else if (this.state.progress > progress + 1) {
-      console.log("Scrolled up, turn nav back on");
+      // console.log("Scrolled up, turn nav back on");
       this.handleNavChange(true, false);
     }
     if (
@@ -179,11 +179,6 @@ class PortfolioPage extends Component {
                 <code>My role: Architect, Owner</code>
               </p>
             </div>
-            {/* <div className="Column-2" style={{ gridRow: 3 }}>
-              <p style={{ textAlign: "center" }}>
-                <code>Languages Used Here</code>
-              </p>
-            </div> */}
           </Fade>
           <Fade right>
             <div className="Column-2" style={{ gridRow: 4 }}>
@@ -224,20 +219,12 @@ class PortfolioPage extends Component {
                   <img src={Scanit_2} alt="" />
                 </div>
               </Carousel>
-              {/* <p className="Offset">
-                <code>SCREENSHOT HERE</code>
-              </p> */}
             </div>
             <div className="Column-2" style={{ gridRow: 6 }}>
               <p>
                 <code>My role: Architect, Senior Engineer</code>
               </p>
             </div>
-            {/* <div className="Column-1" style={{ gridRow: 6 }}>
-              <p style={{ textAlign: "center" }}>
-                <code>Languages Used Here</code>
-              </p>
-            </div> */}
           </Fade>
           <Fade left>
             <div
@@ -256,8 +243,11 @@ class PortfolioPage extends Component {
                   app," which users reach their highest selves by providing
                   guidance through simple tasks ("shifts"). Download it on the
                   App Store by clicking{" "}
-                  <a href="https://apps.apple.com/us/app/the-daily-shifts/id1441559027">
-                    HERE
+                  <a
+                    href="https://apps.apple.com/us/app/the-daily-shifts/id1441559027"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <blue style={{ textDecoration: "none" }}>HERE</blue>
                   </a>
                 </code>
               </p>
@@ -273,9 +263,6 @@ class PortfolioPage extends Component {
               <li>
                 <code>Simple UX</code>
               </li>
-              <p ref={this.bottomRef}>
-                <code>My role: Product Owner (Scrum)</code>
-              </p>
             </div>
             <div
               className="Column-2"
@@ -293,51 +280,16 @@ class PortfolioPage extends Component {
                   <img src={TDS_3} alt="" />
                 </div>
               </Carousel>
-              {/* <p className="Offset">
-                <code>SCREENSHOT HERE</code>
-              </p> */}
             </div>
-          </Fade>
-          {/* <Fade left>
-            <div className="Column-1" style={{ gridRow: 4 }}>
-              <p>
-                <code>Some sort of thing here.</code>
-              </p>
-            </div>
-          </Fade>
-          <Fade right>
-            <div className="Column-2" style={{ gridRow: 5 }}>
-              <p>
-                <code>Another thing here. Why isn't it loading?</code>
-              </p>
-              <p className="Right-Justified">
-                <code>
-                  Some sort of thing here. Some additional text to show right
-                  justified text.
-                </code>
+            <div
+              className="Column-1"
+              style={{ gridRow: 9, paddingBottom: "60px" }}
+            >
+              <p ref={this.bottomRef} id="portfolioBottom">
+                <code>My role: Product Owner (Scrum)</code>
               </p>
             </div>
           </Fade>
-          <Fade left>
-            <div className="Column-1" style={{ gridRow: 6 }}>
-              <p>
-                <code>Some sort of thing here.</code>
-              </p>
-            </div>
-          </Fade>
-          <Fade right>
-            <div className="Column-1" style={{ gridRow: 7 }}>
-              <p>
-                <code>Another thing here. Why isn't it loading?</code>
-              </p>
-              <p className="Right-Justified">
-                <code>
-                  Some sort of thing here. Some additional text to show right
-                  justified text.
-                </code>
-              </p>
-            </div>
-          </Fade> */}
         </div>
       </div>
     );

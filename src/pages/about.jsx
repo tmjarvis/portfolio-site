@@ -35,7 +35,10 @@ class AboutPage extends Component {
             <code>
               If you'd like to learn more about this custom-coded portfolio
               site, click 👉{" "}
-              <a href="/portfolio#example" style={{ textDecoration: "none" }}>
+              <a
+                href="https://github.com/tmjarvis/portfolio-site"
+                style={{ textDecoration: "none" }}
+              >
                 <blue>
                   <u>here</u>
                 </blue>

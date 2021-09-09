@@ -6,12 +6,19 @@ const Progress = (props) => {
   const section3Class = props.sections.section3 ? "ActiveText" : "ProgressText";
   var filledHeight = 0;
   var filledHeightString = 0;
-  if (props.progress && props.windowHeight && props.totalHeight) {
+  if (props.progress && props.windowHeight) {
     filledHeight =
-      (props.progress / (props.totalHeight - props.windowHeight + 60)) * 80;
+      (props.progress / (document.body.offsetHeight - props.windowHeight)) * 80;
     filledHeightString = filledHeight + "vh";
   }
-  console.log("Yonder props: ", props, "filledHeight: ", filledHeight);
+  // console.log(
+  //   "Yonder props: ",
+  //   props,
+  //   "filledHeight: ",
+  //   filledHeight,
+  // document.getElementById("portfolioBottom").offsetTop
+  //   document.body.offsetHeight
+  // );
   //   console.log(
   //     `Progress: ${props.progress}, windowHeight: ${props.windowHeight}, totalHeight: ${props.totalheight}, filledHeight: ${filledHeight}`
   //   );

@@ -1,4 +1,5 @@
 $mobile: 600px
+$big: 1500px
 
 .FancyLine
     border-left: 6px solid #61dafb
@@ -98,6 +99,7 @@ CustomButton
     border-color: #61dafb
     text-decoration: none
     transition: background-color .5s ease
+    cursor: pointer
     &:hover
         background-color: #61dafb
         color: #282d33
@@ -180,6 +182,7 @@ Blue
     margin: 6% 0
     @media (max-width: $mobile)
         margin: 12% 0
+
 .Carousel
     padding: 10% 0 0 10%
     @media (max-width: $mobile)
@@ -188,4 +191,6 @@ Blue
 .Carousel-Mobile-Images
     margin: 100px 20% 0
     @media (max-width: $mobile)
-        padding: 20px 20%
+        margin: 20px 20%
+    @media (min-width: $big)
+        margin: 100px 30% 0

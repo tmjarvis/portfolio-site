@@ -13,6 +13,7 @@ import firebaseLogo from "../images/firebaseLogo.png";
 import swiftLogo from "../images/swiftLogo.png";
 import phpLogo from "../images/phpLogo.svg";
 import Button from "../components/customButton";
+import resume from "../images/Trevor_Jarvis_Resume.pdf";
 
 class ResumePage extends Component {
   state = {
@@ -47,7 +48,7 @@ class ResumePage extends Component {
             </p>
           </div>
           <div className="Center-Justified">
-            <Button text="Download Resume" link="google.com" className />
+            <Button text="View Resume" type="download" link={resume} />
           </div>
           <div className="Center-Justified">
             <p className="Vertical-Space">
